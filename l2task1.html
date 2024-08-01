@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+  <title>Cognifyz Responsive cards Layout || Ashish patel</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    nav {
+      background-color: #938787;
+    }
+
+    nav img {
+      width: 180px;
+      padding: 10px;
+    }
+
+    .card-img {
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+    .card{
+      transition: all 0.5s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="bg-info">
+  <nav>
+    <img src="logo.png" alt="" />
+  </nav>
+  <div class="container">
+    <h1 class="mt-2 mb-4 text-center text-white">Responsive Grid Layout with Cards</h1>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://source.unsplash.com/150x130/?job" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">Internship</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni illum optio atque quia iusto nesciunt qui alias dolores quae.</p>
+            <a href="#" class="btn btn-primary">Apply now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://source.unsplash.com/150x130/?webdevelopment" class="card-img-top " alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">web devlopment</h5>
+            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, facere. Quod et cumque dolor obcaecati?</p>
+            <a href="#" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://source.unsplash.com/150x130/?coding" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">coding</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nulla fuga eos tenetur esse culpa?</p>
+            <a href="#" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognifyz Javascript|| Ashish patel</title>
+  <link rel="stylesheet" href="l1task2.css" />
+</head>
+
+<body>
+  <nav>
+    <img src="logo.png" alt="" />
+  </nav>
+  <button id="colorButton" onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      var button = document.getElementById("colorButton");
+      if (button.style.backgroundColor == "blue") {
+        button.style.backgroundColor = "red";
+      } else if (button.style.backgroundColor == "red") {
+        button.style.backgroundColor = "grey";
+      } else if (button.style.backgroundColor == "grey") {
+        button.style.backgroundColor = "tan";
+      } else if (button.style.backgroundColor == "tan") {
+        button.style.backgroundColor = "sienna";
+      } else if (button.style.backgroundColor == "sienna") {
+        button.style.backgroundColor = "green";
+      } else {
+        button.style.backgroundColor = "blue";
+      }
+    }
+  </script>
+
+  <script>
+    var today = new Date();
+    var time = today.getHours();
+
+    if (time < 12) {
+      alert("Good morning!");
+    } else if (time < 18) {
+      alert("Good afternoon!");
+    } else {
+      alert("Good evening!");
+    }
+  </script>
+
+  <form id="calculator">
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <input type="number" id="num2" placeholder="Enter second number" />
+    <button type="button" onclick="calculate()">Calculate</button>
+    <div id="result"></div>
+  </form>
+
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var result = num1 + num2;
+      document.getElementById("result").innerText = "The result is: " + result;
+    }
+  </script>
+
+  <footer class="">
+    <div class="copyright">
+      <p>&copy; 2024 Ashish Patel- all rights reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>

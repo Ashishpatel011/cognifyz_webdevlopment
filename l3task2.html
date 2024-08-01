@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognifyz internship || Ashish patel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="l3task2.css">
+
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="l1task1.html"> <img src="logo.png" alt="" /></a>
+    </div>
+    <ul id="navbar">
+      <li><a href="l3task2.html">Home</a></li>
+      <li><a href="#cont">About</a></li>
+      <li><a href="#contact">Contect</a></li>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScd5TRLHUVC8kle_6k4JceWTcfknRoNsuRB6Q4ymhGrAIsnSA/viewform?usp=send_form"
+        target="_blank"><button>Apply for internship</button></a>
+      <a href="#" id="close"><i class="fas fa-times"></i></a>
+    </ul>
+
+    <div id="mobile">
+      <i id="bar" class="fas fa-outdent"></i>
+  </nav>
+  <div class="cont" id="cont">
+    <h1>Real-world Lessons, Infinite Opportunities in Web Development</h1>
+    <p>
+      Cognifyz Technologies is a leading technology company that specializes in the dynamic field of data science and
+      excels in delivering impactful projects and solutions. The company offers a wide range of products and services,
+      including artificial intelligence (AI), machine learning (ML), and data analytics tools. Cognifyz Technologies
+      also provides training programs to enhance skills and knowledge in these areas. The company
+      focuses on delivering innovative and cutting-edge solutions to meet the evolving needs of businesses. Enhance your
+      professional presence by updating your LinkedIn profile. Share your achievements, such as the offer letter or
+      internship completion certificate, which you received
+      from us. Don't forget to mention and tag Cognifyz Technologies in your posts. You can use hashtags like #cognifyz
+      #cognifyzTech #cognifyzTechnologies to showcase your affiliation. Maintain academic integrity and respect
+      intellectual property. Plagiarism and copying code
+      are serious offenses that can lead to the termination of your internship and subsequent restriction from future
+      opportunities with us. Demonstrate your work by sharing a video showcasing the completion of
+      your tasks on LinkedIn. Remember to tag Cognifyz Technologies in your post and use relevant hashtags like
+      #cognifyz #cognifyzTech #cognifyzTechnologies to engage with our community.
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScd5TRLHUVC8kle_6k4JceWTcfknRoNsuRB6Q4ymhGrAIsnSA/viewform?usp=send_form"
+      target="_blank"><img src="i1.png" alt="" /></a>
+    <div class="Highlight">
+      <h1>Highlights</h1>
+      <ul>
+        <li><strong>Real-world Experience:</strong> Dive into live projects, applying your skills in practical settings
+          under the guidance of seasoned professionals.</li>
+        <li><strong>Mentorship:</strong> Receive personalized guidance and feedback from industry experts, fostering
+          your
+          growth and development as a web developer.</li>
+        <li><strong>Networking Opportunities:</strong> Connect with professionals in the field, expanding your network
+          and
+          opening doors to future career opportunities.</li>
+      </ul>
+    </div>
+    <div class="Qualifications">
+      <h1>Qualifications</h1>
+      <ul>
+        <li>Proficiency in HTML, CSS, and JavaScript.</li>
+        <li>Familiarity with front-end frameworks like React or Angular.</li>
+        <li>Knowledge of version control systems, such as Git.</li>
+        <li>Strong problem-solving skills and a passion for learning.</li>
+      </ul>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScd5TRLHUVC8kle_6k4JceWTcfknRoNsuRB6Q4ymhGrAIsnSA/viewform?usp=send_form"
+      target="_blank"><button>Apply Now</button></a>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2 class="heading"> Get in Touch</h2>
+    <div class="conta">
+      <div class="left-c">
+        <p> <i class="fa-solid fa-envelope"></i> conect@cognifyz.com </p>
+        <p><i class="fa-solid fa-phone"></i> 000-000-0000</p>
+        <p><a href="https://www.linkedin.com/company/cognifyz-techonologies/" target="_blank"><i
+              class="fab fa-linkedin i1"></i>@cognifyz-Technologys</a></p>
+        <p><a href="https://www.instagram.com/cognifyz_tech?igsh=azdnbzd4OWY1d3Zu" target="_blank"><i
+              class="fa-brands fa-instagram"></i>@cognifyz_tech</a></p>
+      </div>
+      <div class="right-c">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="name" placeholder="your name" required>
+          <input type="email" name="email" placeholder="your email" required>
+          <textarea name="message" rows="6" placeholder="your message"></textarea>
+          <button type="submit" class="button">submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="">
+    <div class="copyright">
+      <p>&copy; 2024 Cognifyz-all rights reserved (designed by Ashish Patel)</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const bar = document.getElementById('bar');
+      const nav = document.getElementById('navbar');
+      const close = document.getElementById('close');
+
+      function openSidebar() {
+        nav.classList.add('active');
+      }
+
+      function closeSidebar() {
+        nav.classList.remove('active');
+      }
+
+      bar.addEventListener('click', openSidebar);
+
+      close.addEventListener('click', closeSidebar);
+
+      function isInSidebar(element) {
+        return nav.contains(element) || element === bar;
+      }
+
+      document.addEventListener('click', function (event) {
+        if (!isInSidebar(event.target)) {
+          closeSidebar();
+        }
+      });
+
+      window.addEventListener('scroll', function () {
+        if (nav.classList.contains('active') && !isInSidebar(event.target)) {
+          closeSidebar();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

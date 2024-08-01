@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognifyz Image Gallery || Ashish Patel</title>
+    <link rel="stylesheet" href="l3task1.css">
+</head>
+
+<body>
+    <nav>
+        <img src="logo.png" alt="" />
+    </nav>
+
+    <!-- part1 -->
+    <p>PART-1</p>
+    <p>This section is for enlarged-image</p>
+    <div class="gallery">
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/900x500/?coding" alt="Thumbnail 1" onclick="enlargeImage(this.src)">
+        </div>
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/900x500/?website" alt="Thumbnail 2" onclick="enlargeImage(this.src)">
+        </div>
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/900x500/?job" alt="Thumbnail 3" onclick="enlargeImage(this.src)">
+        </div>
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/900x500/?client" alt="Thumbnail 3" onclick="enlargeImage(this.src)">
+        </div>
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/900x500/?fort" alt="Thumbnail 3" onclick="enlargeImage(this.src)">
+        </div>
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/900x500/?places" alt="Thumbnail 3" onclick="enlargeImage(this.src)">
+        </div>
+    </div>
+    <div class="enlarged-image" id="enlargedImage" onclick="hideEnlargedImage()">
+        <img src="https://source.unsplash.com/900x500/?coding" alt="Thumbnail 1">
+    </div>
+
+    <!-- part2 -->
+    <p>PART-2</p>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://source.unsplash.com/1000x400/?coding" alt="Slide 1">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://source.unsplash.com/1000x400/?animal" alt="Slide 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://source.unsplash.com/1000x400/?food" alt="Slide 3">
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+            slideIndex++;
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+
+    <!-- Script for Enlarged Image -->
+    <script>
+        function enlargeImage(src) {
+            const enlargedImage = document.getElementById("enlargedImage");
+            enlargedImage.style.display = "flex";
+            enlargedImage.children[0].src = src;
+        }
+    </script>
+</body>
+
+</html>
